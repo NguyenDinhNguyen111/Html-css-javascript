@@ -1,0 +1,102 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(stream_n.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 720px;
+}
+.container{
+    width: 450px;
+    min-height: 300px ;
+    padding: 20px;
+    border: 2px solid green;
+    border-radius: 50px;
+    position: relative;
+    background-color: rgba(255,255,255,.5);
+    
+}
+.container::after{
+    content: "FORM ĐĂNG KÝ";
+    position: absolute;
+    padding-left: 20px;
+    top: -1px;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(255,255,255,.5);
+
+}
+#pphaha{
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.gender{
+    display: flex;
+    margin: 5px;
+    font-weight: bold;
+}
+.select{
+    margin-left: 5px;
+    font-size: 18px;
+}
+#bd{
+    font-size: 18px;
+    font-weight: bold;
+}
+.input2{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.input i{
+    position: absolute;
+}
+.input-check{
+    margin-top: 10px;
+    display: flex;
+}
+.input-check p{
+    margin-left: 5px;
+}
+.icon{
+    margin: 25px 20px 20px 360px;
+    min-width: 50px;
+    justify-content: right;
+}
+.icon2{
+    margin: 20px 20px 20px 380px;   
+    min-width: 50px;
+    justify-content: right;
+}
+input[type="text"],[type="password"]{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: blue;
+    color: green;
+}
+.but{
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 80px;
+}
+.btn{
+  background-color: lime;
+  border: solid 2px black;
+  color: green;
+  padding: 10px 30px 10px 30px;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 10px;
+}
