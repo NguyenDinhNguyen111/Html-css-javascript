@@ -1,0 +1,82 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(show_n.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container{
+    width: 450px;
+    height: 320px ;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    position: relative;
+    background-color: rgba(255,255,255,.5);
+}
+.container::after{
+    content: "FORM ĐĂNG NHẬP";
+    position: absolute;
+    top: -5px;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    
+}
+.input i{
+    position: absolute;
+}
+.input-check{
+    display: flex;
+}
+.input-check p{
+    margin-left: 5px;
+}
+.icon{
+    margin: 18px 20px 20px 360px;
+    min-width: 50px;
+    justify-content: right;
+}
+.icon2{
+    margin: 12px 20px 20px 380px;   
+    min-width: 50px;
+    justify-content: right;
+}
+input[type="text"],[type="password"]{
+    width: 100%;
+    margin-bottom: 15px ;
+    padding: 10px;
+    border-radius: 10px;
+}
+.but{
+    display: inline-block;
+    justify-content: center;
+    margin-top: 15px;
+    padding-left: 80px;
+}
+.btn{
+  background-color: aqua;
+  border: solid 2px black;
+  color: black;
+  padding: 10px 30px 10px 30px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+}
+#linking{
+    background-color: aqua;
+    border: solid 2px black;
+    color: black;
+    padding: 8px 30px 10px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+}
