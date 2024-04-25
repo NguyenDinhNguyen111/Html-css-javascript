@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form dang ky</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='formdangky.css'>
+    <script>
+        function showPassword(){
+        var x = document.getElementById("Password");
+        var y = document.getElementById("icon1");
+        if (x.type === "password") {
+            x.type = "text";
+        } 
+        else {
+            x.type = "password";
+        }
+        if (y.className === "fa-solid fa-eye-slash icon2") {
+            y.className = "fa-solid fa-eye icon2 ";
+        } 
+        else {
+            y.className = "fa-solid fa-eye-slash icon2";
+        }
+}
+        function showPassword2(){
+        var x = document.getElementById("Password2");
+        var y = document.getElementById("icon2");
+        if (x.type === "password") {
+            x.type = "text";
+        } 
+        else {
+            x.type = "password";
+        }
+        if (y.className === "fa-solid fa-eye-slash icon2") {
+            y.className = "fa-solid fa-eye icon2 ";
+        } 
+        else {
+            y.className = "fa-solid fa-eye-slash icon2";
+        }
+}
+        function dangKy(){
+        var a = document.getElementById("Username").value;
+        var b = document.getElementById("Email").value;
+        var c = document.getElementById("Password").value;
+        var d = document.getElementById("Password2").value;
+        if(checkInfo(a,b,c,d)==true){
+            alert("Chúc mừng bạn đã đăng ký thành công!\n Trao niềm tin, nhận tài lộc!")
+        }
+}
+        function checkInfo(a,b,c,d){
+        if(a==""){
+            alert("Vui lòng nhập tên đăng nhập của bạn!");
+            return false;
+        }
+        else if(a.length<4){
+            alert("Tên đăng nhập phải dài tối thiểu 4 ký tự nha.");
+            return false;
+        }
+        if(b==""){
+            alert("Vui lòng nhập email của bạn!");
+            return false;
+        }
+        else {
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(b)) {
+                alert("Email không hợp lệ");
+                return;}
+        }
+        if(c==""){
+            alert("Vui lòng nhập mật khẩu của bạn!");
+            return false;
+        }
+        else if(c.length <8){
+            alert("Mật khẩu phải dài tối thiểu 8 ký tự nha.");
+            return false;
+        }
+        if(d==""){
+            alert("Vui lòng xác nhận lại mật khẩu của bạn!");
+            return false;
+        }
+        else if(c!=d){
+            alert("Mật khẩu xác nhận phải trùng khớp với mật khẩu đã nhập!");
+            return false;
+        }
+        return true;
+        
+    }
+        function reset(){
+        document.getElementById("Username").value= null;
+        document.getElementById("Email").value= null;
+        document.getElementById("Password").value= null;
+        document.getElementById("Password2").value=null;
+}
+        function checkBox(){
+        var x = document.getElementById("icon3");
+        if (x.className === "fa-regular fa-square") {
+            x.className = "fa-regular fa-square-check";
+        } 
+        else {
+            x.className = "fa-regular fa-square";
+        }
+    }
+    </script>
+    <script src="https://kit.fontawesome.com/90c74a01ed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="input">
+            <button class="btn-icon"><i class="fa-solid fa-user icon"></i></button>
+            <input class="input-field" type="text" placeholder="Tên đăng nhập" id="Username">
+            </div>
+            <div class="input2">
+                <label for="birthday" id="bd">Ngày sinh của bạn: </label>
+                <input class="input-field" type="date" placeholder="Ngày sinh" id="Birthday">
+                </div>
+            <p id="pphaha">Giới tính của bạn:</p>
+            <div class="gender">
+                <div class="select">
+                    <input type="radio">
+                    <label for="html">Nam</label>
+                </div>
+                <div class="select">
+                    <input type="radio">
+                    <label for="html">Nữ</label>
+                </div>
+                <div class="select">
+                    <input type="radio">
+                    <label for="html">Không muốn tiết lộ</label>
+                </div>
+            </div>
+            <div class="input">
+                <button class="btn-icon"><i class="fa-solid fa-envelope icon"></i></button>
+                <input class="input-field" type="text" placeholder="Email" id="Email">
+                </div>
+            <div class="input">
+                <i class="fa-solid fa-eye-slash icon2" id ="icon1" onclick="showPassword()"></i>
+                <input class="input-field" type="password" placeholder="Mật khẩu" id="Password">
+            </div>
+            <div class="input">
+                    <i class="fa-solid fa-eye-slash icon2" id ="icon2" onclick="showPassword2()"></i>
+                    <input class="input-field" type="password" placeholder="Nhập lại Mật khẩu" id="Password2">
+            </div>
+            <div class="input-check">
+                <i class="fa-regular fa-square" id ="icon3" onclick="checkBox()"></i>
+                <p>Tôi đã đồng ý với <span><a href="Prize.html" target="_blank">Điều khoản và dịch vụ</a></span></p>
+            </div>
+            <div class="but">
+                <button class="btn" type="button" onclick="dangKy()"><p>Đăng ký</p></div>
+                <button class="btn" type="button" onclick="reset()"><p>Reset</p></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
